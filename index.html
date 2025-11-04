@@ -21,10 +21,16 @@
   <main class="container">
     <section class="panel">
       <p class="muted">Preloaded plan: <strong>Mon 03 Nov 2025 → Sun 07 Dec 2025 (Weeks 1–5)</strong>.</p>
+
       <div class="stats">
         <div><strong id="doneCount">0</strong> / <span id="totalCount">0</span> done</div>
         <div>Progress: <strong id="progressPct">0%</strong></div>
         <div>Avg weight: <strong id="avgWeight">—</strong> kg</div>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="progress">
+        <div id="progressBar" class="progress-bar" style="width:0%"></div>
       </div>
     </section>
 
@@ -56,6 +62,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script defer src="script.js?v=4"></script>
 </body>
 </html>
