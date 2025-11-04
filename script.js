@@ -13,7 +13,7 @@ function r(w,d,s,det,hr,purp,acts){return{week:w,date:d,session:s,details:det,hr
 const ROWS=[
 r(1,"2025-11-03","Easy Run + Pilates","5 km easy @ 5:30–5:50 /km","💓 Z1–Z2 (125–145 bpm)","🎯 Aerobic recovery & fat-burn",["Easy Run","Pilates"]),
 r(1,"2025-11-04","Gym (Lower Body)","Squats 3×8 + Lunges 3×10 + Calf Raises 3×15","💪 Strength / Mobility","🎯 Power output maintenance",["Gym – Lower"]),
-r(1,"2025-11-05","Pilates + Key Run","Varies weekly – see focus","💓 Z3–Z4 (155–179 bpm)","🎯 Threshold or speed development",["Pilates","Key Run"]),
+r(1,"2025-11-05","Pilates + Key Run","6km speed intervals, 6 * 400m or 3 * 1km at 3:35 pace","💓 Z3–Z4 (155–179 bpm)","🎯 Threshold or speed development",["Pilates","Key Run"]),
 r(1,"2025-11-06","Swim","1.5–2 km steady + drills","💓 Aerobic","🎯 Active recovery",["Swim"]),
 r(1,"2025-11-07","Gym (Upper + Core)","Bench, Rows, Planks, Hip work","💪 –","🎯 Posture stability",["Gym – Upper/Core"]),
 r(1,"2025-11-08","Parkrun 5 km","Warm up 2 km + Strides ×4 → 5 km race effort","💓 Z4 (167–179 bpm)","🎯 Benchmark run",["Parkrun"]),
