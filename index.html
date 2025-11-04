@@ -3,73 +3,56 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My App</title>
-  <meta name="description" content="A clean, fast starter for a website or app." />
+  <title>Training Check-off & Weight Tracker</title>
+  <meta name="description" content="Editable table to check off daily sessions and log weight (kg).">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container">
-      <h1 class="logo">My App</h1>
-      <nav class="nav">
-        <a href="#features">Features</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+      <h1 class="logo">Training Check-off</h1>
+      <nav>
+        <button id="exportCsvBtn" class="ghost">Export CSV</button>
+        <button id="resetBtn" class="danger">Reset ticks & weights</button>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h2>Ship something today.</h2>
-        <p>A lightweight starter you can deploy on GitHub Pages in minutes.</p>
-        <div class="actions">
-          <button id="primaryAction">Click me</button>
-          <a class="ghost" href="https://github.com" target="_blank" rel="noreferrer">View on GitHub</a>
-        </div>
+  <main class="container">
+    <section class="panel">
+      <p class="muted">Preloaded plan: <strong>Mon 03 Nov 2025 → Sun 07 Dec 2025 (Weeks 1–5)</strong>.</p>
+      <div class="stats">
+        <div><strong id="doneCount">0</strong> / <span id="totalCount">0</span> done</div>
+        <div>Progress: <strong id="progressPct">0%</strong></div>
+        <div>Avg weight: <strong id="avgWeight">—</strong> kg</div>
       </div>
     </section>
 
-    <section id="features" class="section container">
-      <h3>Features</h3>
-      <ul class="features">
-        <li>⚡ Fast, single-file starter</li>
-        <li>📱 Fully responsive layout</li>
-        <li>🧩 Clean HTML/CSS/JS structure</li>
-        <li>🚀 Ready for GitHub Pages</li>
-      </ul>
-    </section>
-
-    <section id="about" class="section container">
-      <h3>About</h3>
-      <p>This is a minimal template. Edit <code>index.html</code>, <code>style.css</code>, and <code>script.js</code> to make it yours.</p>
-    </section>
-
-    <section id="contact" class="section container">
-      <h3>Contact</h3>
-      <form id="contactForm">
-        <label>
-          <span>Name</span>
-          <input type="text" name="name" placeholder="Your name" required />
-        </label>
-        <label>
-          <span>Email</span>
-          <input type="email" name="email" placeholder="you@example.com" required />
-        </label>
-        <label>
-          <span>Message</span>
-          <textarea name="message" rows="4" placeholder="Say hi..."></textarea>
-        </label>
-        <button type="submit">Send</button>
-        <p id="msg" class="muted" role="status" aria-live="polite"></p>
-      </form>
+    <section>
+      <div class="table-wrap">
+        <table id="planTable">
+          <thead>
+            <tr>
+              <th>Week</th>
+              <th>Date</th>
+              <th>Day</th>
+              <th>Session Type</th>
+              <th>Workout Details</th>
+              <th>Intensity / HR Zone</th>
+              <th>Purpose</th>
+              <th>Done</th>
+              <th>Weight (kg)</th>
+            </tr>
+          </thead>
+          <tbody><!-- rows injected by script --></tbody>
+        </table>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <small>© <span id="year"></span> You — Deployed with GitHub Pages</small>
+      <small>© <span id="year"></span> Ben — Interactive plan</small>
     </div>
   </footer>
 
