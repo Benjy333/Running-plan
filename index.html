@@ -2,36 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Training Check-off & Weight Tracker</title>
-  <meta name="description" content="Editable table to check off daily sessions and log weight (kg).">
+  <meta name="theme-color" content="#0b1220" />
+  <meta name="description" content="Tick each activity and log daily weight (kg). Mobile-friendly.">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container">
       <h1 class="logo">Training Check-off</h1>
-      <nav>
-        <button id="exportCsvBtn" class="ghost">Export CSV</button>
-        <button id="resetBtn" class="danger">Reset ticks & weights</button>
+      <nav class="actions">
+        <button id="exportCsvBtn" class="btn ghost">Export CSV</button>
+        <button id="resetBtn" class="btn danger">Reset</button>
       </nav>
     </div>
   </header>
 
   <main class="container">
     <section class="panel">
-      <p class="muted">Preloaded plan: <strong>Mon 03 Nov 2025 → Sun 07 Dec 2025 (Weeks 1–5)</strong>.</p>
+      <p class="muted">Plan: <strong>Mon 03 Nov 2025 → Sun 07 Dec 2025 (Weeks 1–5)</strong></p>
 
       <div class="stats">
-        <div><strong id="doneCount">0</strong> / <span id="totalCount">0</span> done</div>
+        <div><strong id="doneCount">0</strong> / <span id="totalCount">0</span> activities</div>
         <div>Progress: <strong id="progressPct">0%</strong></div>
         <div>Avg weight: <strong id="avgWeight">—</strong> kg</div>
       </div>
 
-      <!-- Progress bar -->
-      <div class="progress">
-        <div id="progressBar" class="progress-bar" style="width:0%"></div>
-      </div>
+      <div class="progress"><div id="progressBar" class="progress-bar"></div></div>
     </section>
 
     <section>
@@ -42,9 +40,9 @@
               <th>Week</th>
               <th>Date</th>
               <th>Day</th>
-              <th>Session Type</th>
+              <th>Session</th>
               <th>Workout Details</th>
-              <th>Intensity / HR Zone</th>
+              <th>Intensity / HR</th>
               <th>Purpose</th>
               <th>Done</th>
               <th>Weight (kg)</th>
@@ -62,6 +60,7 @@
     </div>
   </footer>
 
-  <script defer src="script.js?v=4"></script>
+  <!-- cache-bust + defer -->
+  <script defer src="script.js?v=7"></script>
 </body>
 </html>
